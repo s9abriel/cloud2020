@@ -1,0 +1,16 @@
+server:
+  port: 7002
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone:
+        http://localhost:7001/eureka/
+
+  server:
+    #关闭自我保护
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 2000
